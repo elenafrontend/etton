@@ -1,5 +1,6 @@
 @import "../css/normalize";
 @import "../css/iconfont";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 // === PLACEHOLDERS ===
 %list {
@@ -25,7 +26,7 @@
 // Font
 
 // Colors
-$color-primary: #2d2d44;
+$color-primary: rgb(45, 45, 68);
 $color-white: #ffffff;
 $color-grey: #8f8f9b;
 
@@ -76,6 +77,7 @@ html {
 }
 
 body {
+  color: $color-primary;
   font-family: "Roboto", sans-serif;
 }
 
@@ -93,4 +95,8 @@ body {
 
 // === HEADER ===
 @import "modules/header";
+// === / HEADER ===
+
+// === HEADER ===
+@import "modules/modal";
 // === / HEADER ===
