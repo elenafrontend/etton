@@ -7,13 +7,13 @@
   background-color: $color-primary;
   border-radius: 3px;
 
-  &:hover {
+  &:not([disabled]):hover {
     background-color: $color-yellow;
   }
 }
 
 .modal {
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
@@ -81,7 +81,7 @@
 
     &-text {
       width: 100%;
-      padding: 5px;
+      padding: 10px;
       margin-bottom: 30px;
       font: inherit;
       vertical-align: middle;
@@ -89,6 +89,10 @@
       border: 1px solid $color-grey;
       resize: none;
       box-sizing: border-box;
+
+      &:focus {
+        outline-color: $color-yellow;
+      }
 
       &:last-of-type {
         margin-bottom: 20px;
@@ -130,8 +134,8 @@
   &__button {
     @include form-btn();
 
-    &--blocked {
-      background-color: lighten($color-primary, 20%);
+    &:disabled {
+      opacity: 0.25;
     }
 
     &--ok {

@@ -1,3 +1,7 @@
+.button-wrapper {
+  text-align: center;
+}
+
 .add-button {
   @extend %btn;
 
@@ -64,53 +68,3 @@
     }
   }
 }
-
-/* 
-
-
-.draw {
- 
-
-
-  // This covers the top & right borders (expands right, then down)
-  
-
-  // And this the bottom & left borders (expands left, then up)
-  
-
-  
-
-  // Hover styles
-  
-
-  &:hover
-
-  &:hover
-}
-
-// Inherits from .draw
-.meet {
-  &:hover {
-    color: $yellow;
-  }
-
-  // Start ::after in same position as ::before
-  &::after {
-    top: 0;
-    left: 0;
-  }
-
-  // Change colors
-  &:hover::before {
-    border-top-color: $yellow;
-    border-right-color: $yellow;
-  }
-
-  &:hover::after {
-    border-bottom-color: $yellow;
-    border-left-color: $yellow;
-    transition: // Animate height first, then width height 0.3s ease-out, width
-      0.3s ease-out 0.3s;
-  }
-}
- */
