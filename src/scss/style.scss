@@ -113,9 +113,21 @@ body {
 }
 
 .container {
-  max-width: 992px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 0 20px;
+
+  @include breakpoint-min(xs) {
+    max-width: 400px;
+  }
+
+  @include breakpoint-min(md) {
+    max-width: 640px;
+  }
+
+  @include breakpoint-min(lg) {
+    max-width: 992px;
+  }
 }
 
 // === HEADER ===
