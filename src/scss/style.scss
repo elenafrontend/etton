@@ -72,6 +72,15 @@ $transition: 0.2s;
 
 // === / MIXINS ===
 
+// === ANIMATION ===
+
+@keyframes scale {
+  100% {
+    transform: scale(90%);
+  }
+}
+// === / ANIMATION ===
+
 // === COMMON ===
 html {
   scroll-behavior: smooth;
