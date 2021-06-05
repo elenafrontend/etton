@@ -115,7 +115,7 @@ body {
 .container {
   max-width: 992px;
   margin: 0 auto;
-  padding: 90px 0;
+  padding: 0 20px;
 }
 
 // === HEADER ===
@@ -133,3 +133,7 @@ body {
 // === CARDS ===
 @import "modules/cards";
 // === / CARDS ===
+
+// === FOOTER ===
+@import "modules/footer";
+// === / FOOTER ===
