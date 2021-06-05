@@ -29,7 +29,7 @@
 $color-primary: rgb(45, 45, 68);
 $color-white: #ffffff;
 $color-grey: #8f8f9b;
-$color-yellow: #ffb902;
+$color-yellow: #fdd805;
 
 // Breakpoints
 $breakpoints: (
@@ -42,6 +42,7 @@ $breakpoints: (
 );
 
 $transition: 0.2s;
+$bdrs: 3px;
 
 // === / VARIABLES ===
 
@@ -82,13 +83,25 @@ $transition: 0.2s;
 // === / ANIMATION ===
 
 // === COMMON ===
+html,
+body {
+  height: 100%;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  padding-top: 90px;
   color: $color-primary;
   font-family: "Roboto", sans-serif;
+}
+
+main {
+  text-align: center;
 }
 
 .visually-hidden {
@@ -107,6 +120,10 @@ body {
 @import "modules/header";
 // === / HEADER ===
 
-// === HEADER ===
+// === MODAL ===
 @import "modules/modal";
-// === / HEADER ===
+// === / MODAL ===
+
+// === BUTTON ===
+@import "modules/button";
+// === / BUTTON ===

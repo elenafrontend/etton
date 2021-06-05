@@ -1,0 +1,116 @@
+.add-button {
+  @extend %btn;
+
+  position: relative;
+  min-width: 300px;
+  margin: 50px auto;
+  padding: 20px 40px;
+
+  color: $color-primary;
+  font-size: 30px;
+  font-weight: 700;
+  vertical-align: middle;
+
+  background: none;
+  box-shadow: inset 0 0 0 3px $color-primary;
+  border: 0;
+  border-radius: $bdrs;
+  box-sizing: border-box;
+
+  transition: color 0.3s;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+
+    border: 3px solid transparent;
+    box-sizing: inherit;
+  }
+
+  &::before {
+    top: 0;
+    left: 0;
+  }
+
+  &::after {
+    top: 0;
+    left: 0;
+  }
+
+  &:hover {
+    color: $color-yellow;
+
+    &::before,
+    &::after {
+      width: 100%;
+      height: 100%;
+    }
+
+    &::before {
+      border-top-color: $color-yellow; // Make borders visible
+      border-right-color: $color-yellow;
+      transition: width 0.3s ease-out,
+        // Width expands first
+          height 0.3s ease-out 0.3s; // And then height
+    }
+
+    &::after {
+      border-bottom-color: $color-yellow; // Make borders visible
+      border-left-color: $color-yellow;
+      transition: height 0.3s ease-out, width 0.3s ease-out 0.3s; // Animate height first, then width
+    }
+  }
+}
+
+/* 
+
+
+.draw {
+ 
+
+
+  // This covers the top & right borders (expands right, then down)
+  
+
+  // And this the bottom & left borders (expands left, then up)
+  
+
+  
+
+  // Hover styles
+  
+
+  &:hover
+
+  &:hover
+}
+
+// Inherits from .draw
+.meet {
+  &:hover {
+    color: $yellow;
+  }
+
+  // Start ::after in same position as ::before
+  &::after {
+    top: 0;
+    left: 0;
+  }
+
+  // Change colors
+  &:hover::before {
+    border-top-color: $yellow;
+    border-right-color: $yellow;
+  }
+
+  &:hover::after {
+    border-bottom-color: $yellow;
+    border-left-color: $yellow;
+    transition: // Animate height first, then width height 0.3s ease-out, width
+      0.3s ease-out 0.3s;
+  }
+}
+ */
