@@ -21,11 +21,12 @@ html(lang="en")
 		include ../modules/header
 		
 		main
+			h1.visually-hidden #{title}
 			include ../modules/button 
 			include ../modules/modal
 
 			block content
 
-		include ../modules/footer
+			include ../modules/footer
 
 		script(src="js/script.min.js")

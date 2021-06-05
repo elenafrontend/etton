@@ -26,7 +26,7 @@
 // Font
 
 // Colors
-$color-primary: rgb(45, 45, 68);
+$color-primary: #2d2d44;
 $color-white: #ffffff;
 $color-grey: #8f8f9b;
 $color-yellow: #fdd805;
@@ -112,6 +112,12 @@ body {
   clip-path: inset(100%);
 }
 
+.container {
+  max-width: 992px;
+  margin: 0 auto;
+  padding: 90px 0;
+}
+
 // === HEADER ===
 @import "modules/header";
 // === / HEADER ===
@@ -123,3 +129,7 @@ body {
 // === BUTTON ===
 @import "modules/button";
 // === / BUTTON ===
+
+// === CARDS ===
+@import "modules/cards";
+// === / CARDS ===
