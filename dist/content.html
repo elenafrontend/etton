@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Etton, test task">
+    <meta name="description" content="Etton test task - Gumerova Elena">
+    <meta property="og:image" content="images/logo.png">
+    <title>Content</title>
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body> 
+    <header class="header">
+      <div class="container header__container">
+        <button class="menu icon-burger"><span class="visually-hidden">Menu icon</span></button><a class="header__logo" href="#">
+          <picture>
+            <source type="image/webp" srcset="images/logo.webp 1x"><img src="images/logo.png" alt="logo" width="208" height="70">
+          </picture></a>
+        <nav class="nav"> 
+          <ul class="nav__list"> 
+            <li class="nav__item"><a class="nav__link nav__link--active" href="index.html" data-hover="Home">Home</a></li>
+            <li class="nav__item"><a class="nav__link" href="content.html" data-hover="Content">Content</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <h1 class="visually-hidden">Content</h1>
+      <div class="button-wrapper">
+        <button class="add-button">Add item</button>
+      </div>
+      <section class="modal">
+        <h2 class="visually-hidden">Create new card</h2>
+        <form class="modal__content" action="#"> 
+          <fieldset class="modal__forms">
+            <legend class="modal__forms-title">Create new card</legend>
+            <label class="modal__forms-label" for="name">Name</label>
+            <input class="modal__forms-text" id="name" type="text" name="name" placeholder="Enter card name" autofocus autocomplete="on">
+            <div class="upload-btn"><span class="modal__forms-label">Card image</span>
+              <input class="upload-btn__input" id="file" type="file" name="image">
+              <label class="upload-btn__label" for="file"><span class="upload-btn__label-box modal__forms-text">No file chosen</span><span class="upload-btn__label-btn">Choose a file</span></label>
+            </div>
+            <label class="modal__forms-label" for="description">Description</label>
+            <textarea class="modal__forms-text" id="description" name="text" rows="5" placeholder="Enter card description"></textarea>
+            <input class="modal__forms-checkbox" id="show" type="checkbox">
+            <label class="modal__forms-label modal__forms-label-checkbox" for="show">Show</label>
+          </fieldset>
+          <div class="modal__buttons"> 
+            <button class="modal__button modal__button--ok modal__button--blocked" type="submit" disabled>ok </button>
+            <button class="modal__button modal__button--cancel" type="button">cancel</button>
+          </div>
+        </form>
+      </section>
+      <section class="cards">
+        <div class="container">
+          <h2 class="visually-hidden">Cards block</h2>
+          <ul class="cards-list"> 
+                  <li class="cards-item">
+                    <h3 class="cards-item__title">Item name</h3>
+                    <div class="cards-item__img">
+                      <picture>
+                        <source type="image/webp" srcset="images/card-hover.webp"><img src="images/card-hover.png" srcset="images/card-hover@2x.png 2x" alt="logo" width="300" height="200">
+                      </picture>
+                      <picture>
+                        <source type="image/webp" srcset="images/card.webp"><img src="images/card.png" srcset="images/card@2x.png 2x" alt="logo" width="208" height="70">
+                      </picture>
+                    </div>
+                    <p class="cards-item__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique iusto rem illo quisquam praesentium ipsum perspiciatis nam ex placeat impedit dignissimos, distinctio, asperiores molestias perferendis fugiat, minima laborum ab. Illo, consequatur ullam eligendi quam enim cumque doloremque consequuntur fugiat, dolores rem suscipit quod porro nemo sint aliquid, mollitia voluptatibus! Soluta earum ullam ab laudantium necessitatibus excepturi corrupti, officia, error totam ratione voluptatem delectus. Laboriosam enim laborum beatae facilis natus doloremque ea molestiae voluptas veritatis! Eaque officia reiciendis autem delectus eligendi consequatur impedit quam. Mollitia molestias error perferendis quam, laboriosam praesentium explicabo autem placeat sit nisi ea voluptas eveniet cum quaerat.</p>
+                  </li>
+                  <li class="cards-item">
+                    <h3 class="cards-item__title">Item name</h3>
+                    <div class="cards-item__img">
+                      <picture>
+                        <source type="image/webp" srcset="images/card-hover.webp"><img src="images/card-hover.png" srcset="images/card-hover@2x.png 2x" alt="logo" width="300" height="200">
+                      </picture>
+                      <picture>
+                        <source type="image/webp" srcset="images/card.webp"><img src="images/card.png" srcset="images/card@2x.png 2x" alt="logo" width="208" height="70">
+                      </picture>
+                    </div>
+                    <p class="cards-item__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique iusto rem illo quisquam praesentium ipsum perspiciatis nam ex placeat impedit dignissimos, distinctio, asperiores molestias perferendis fugiat, minima laborum ab. Illo, consequatur ullam eligendi quam enim cumque doloremque consequuntur fugiat, dolores rem suscipit quod porro nemo sint aliquid, mollitia voluptatibus! Soluta earum ullam ab laudantium necessitatibus excepturi corrupti, officia, error totam ratione voluptatem delectus. Laboriosam enim laborum beatae facilis natus doloremque ea molestiae voluptas veritatis! Eaque officia reiciendis autem delectus eligendi consequatur impedit quam. Mollitia molestias error perferendis quam, laboriosam praesentium explicabo autem placeat sit nisi ea voluptas eveniet cum quaerat.</p>
+                  </li>
+                  <li class="cards-item">
+                    <h3 class="cards-item__title">Item name</h3>
+                    <div class="cards-item__img">
+                      <picture>
+                        <source type="image/webp" srcset="images/card-hover.webp"><img src="images/card-hover.png" srcset="images/card-hover@2x.png 2x" alt="logo" width="300" height="200">
+                      </picture>
+                      <picture>
+                        <source type="image/webp" srcset="images/card.webp"><img src="images/card.png" srcset="images/card@2x.png 2x" alt="logo" width="208" height="70">
+                      </picture>
+                    </div>
+                    <p class="cards-item__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique iusto rem illo quisquam praesentium ipsum perspiciatis nam ex placeat impedit dignissimos, distinctio, asperiores molestias perferendis fugiat, minima laborum ab. Illo, consequatur ullam eligendi quam enim cumque doloremque consequuntur fugiat, dolores rem suscipit quod porro nemo sint aliquid, mollitia voluptatibus! Soluta earum ullam ab laudantium necessitatibus excepturi corrupti, officia, error totam ratione voluptatem delectus. Laboriosam enim laborum beatae facilis natus doloremque ea molestiae voluptas veritatis! Eaque officia reiciendis autem delectus eligendi consequatur impedit quam. Mollitia molestias error perferendis quam, laboriosam praesentium explicabo autem placeat sit nisi ea voluptas eveniet cum quaerat.</p>
+                  </li>
+                  <li class="cards-item">
+                    <h3 class="cards-item__title">Item name</h3>
+                    <div class="cards-item__img">
+                      <picture>
+                        <source type="image/webp" srcset="images/card-hover.webp"><img src="images/card-hover.png" srcset="images/card-hover@2x.png 2x" alt="logo" width="300" height="200">
+                      </picture>
+                      <picture>
+                        <source type="image/webp" srcset="images/card.webp"><img src="images/card.png" srcset="images/card@2x.png 2x" alt="logo" width="208" height="70">
+                      </picture>
+                    </div>
+                    <p class="cards-item__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique iusto rem illo quisquam praesentium ipsum perspiciatis nam ex placeat impedit dignissimos, distinctio, asperiores molestias perferendis fugiat, minima laborum ab. Illo, consequatur ullam eligendi quam enim cumque doloremque consequuntur fugiat, dolores rem suscipit quod porro nemo sint aliquid, mollitia voluptatibus! Soluta earum ullam ab laudantium necessitatibus excepturi corrupti, officia, error totam ratione voluptatem delectus. Laboriosam enim laborum beatae facilis natus doloremque ea molestiae voluptas veritatis! Eaque officia reiciendis autem delectus eligendi consequatur impedit quam. Mollitia molestias error perferendis quam, laboriosam praesentium explicabo autem placeat sit nisi ea voluptas eveniet cum quaerat.</p>
+                  </li>
+                  <li class="cards-item">
+                    <h3 class="cards-item__title">Item name</h3>
+                    <div class="cards-item__img">
+                      <picture>
+                        <source type="image/webp" srcset="images/card-hover.webp"><img src="images/card-hover.png" srcset="images/card-hover@2x.png 2x" alt="logo" width="300" height="200">
+                      </picture>
+                      <picture>
+                        <source type="image/webp" srcset="images/card.webp"><img src="images/card.png" srcset="images/card@2x.png 2x" alt="logo" width="208" height="70">
+                      </picture>
+                    </div>
+                    <p class="cards-item__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique iusto rem illo quisquam praesentium ipsum perspiciatis nam ex placeat impedit dignissimos, distinctio, asperiores molestias perferendis fugiat, minima laborum ab. Illo, consequatur ullam eligendi quam enim cumque doloremque consequuntur fugiat, dolores rem suscipit quod porro nemo sint aliquid, mollitia voluptatibus! Soluta earum ullam ab laudantium necessitatibus excepturi corrupti, officia, error totam ratione voluptatem delectus. Laboriosam enim laborum beatae facilis natus doloremque ea molestiae voluptas veritatis! Eaque officia reiciendis autem delectus eligendi consequatur impedit quam. Mollitia molestias error perferendis quam, laboriosam praesentium explicabo autem placeat sit nisi ea voluptas eveniet cum quaerat.</p>
+                  </li>
+                  <li class="cards-item">
+                    <h3 class="cards-item__title">Item name</h3>
+                    <div class="cards-item__img">
+                      <picture>
+                        <source type="image/webp" srcset="images/card-hover.webp"><img src="images/card-hover.png" srcset="images/card-hover@2x.png 2x" alt="logo" width="300" height="200">
+                      </picture>
+                      <picture>
+                        <source type="image/webp" srcset="images/card.webp"><img src="images/card.png" srcset="images/card@2x.png 2x" alt="logo" width="208" height="70">
+                      </picture>
+                    </div>
+                    <p class="cards-item__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique iusto rem illo quisquam praesentium ipsum perspiciatis nam ex placeat impedit dignissimos, distinctio, asperiores molestias perferendis fugiat, minima laborum ab. Illo, consequatur ullam eligendi quam enim cumque doloremque consequuntur fugiat, dolores rem suscipit quod porro nemo sint aliquid, mollitia voluptatibus! Soluta earum ullam ab laudantium necessitatibus excepturi corrupti, officia, error totam ratione voluptatem delectus. Laboriosam enim laborum beatae facilis natus doloremque ea molestiae voluptas veritatis! Eaque officia reiciendis autem delectus eligendi consequatur impedit quam. Mollitia molestias error perferendis quam, laboriosam praesentium explicabo autem placeat sit nisi ea voluptas eveniet cum quaerat.</p>
+                  </li>
+                  <li class="cards-item">
+                    <h3 class="cards-item__title">Item name</h3>
+                    <div class="cards-item__img">
+                      <picture>
+                        <source type="image/webp" srcset="images/card-hover.webp"><img src="images/card-hover.png" srcset="images/card-hover@2x.png 2x" alt="logo" width="300" height="200">
+                      </picture>
+                      <picture>
+                        <source type="image/webp" srcset="images/card.webp"><img src="images/card.png" srcset="images/card@2x.png 2x" alt="logo" width="208" height="70">
+                      </picture>
+                    </div>
+                    <p class="cards-item__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique iusto rem illo quisquam praesentium ipsum perspiciatis nam ex placeat impedit dignissimos, distinctio, asperiores molestias perferendis fugiat, minima laborum ab. Illo, consequatur ullam eligendi quam enim cumque doloremque consequuntur fugiat, dolores rem suscipit quod porro nemo sint aliquid, mollitia voluptatibus! Soluta earum ullam ab laudantium necessitatibus excepturi corrupti, officia, error totam ratione voluptatem delectus. Laboriosam enim laborum beatae facilis natus doloremque ea molestiae voluptas veritatis! Eaque officia reiciendis autem delectus eligendi consequatur impedit quam. Mollitia molestias error perferendis quam, laboriosam praesentium explicabo autem placeat sit nisi ea voluptas eveniet cum quaerat.</p>
+                  </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container footer__container"><a class="footer__email" href="mailto:elenafrontend@ya.ru" title="Email me">elenafrontend@ya.ru</a></div>
+    </footer>
+    <script src="js/script.min.js"></script>
+  </body>
+</html>
