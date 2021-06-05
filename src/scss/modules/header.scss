@@ -1,0 +1,44 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 90px;
+  color: $color-white;
+  background-color: $color-primary;
+
+  &__logo {
+    cursor: pointer;
+    transition: $transition;
+    filter: brightness(1.5);
+
+    &:hover {
+      filter: none;
+    }
+  }
+}
+
+.menu {
+  @extend %btn;
+
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  line-height: 1;
+  transform: translateY(-50%);
+
+  &::before {
+    font-size: 20px;
+    transition: $transition;
+    color: $color-white;
+  }
+
+  &:hover {
+    &::before {
+      color: $color-grey;
+    }
+  }
+}
