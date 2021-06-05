@@ -1,13 +1,14 @@
 
-<section class="modal"> 
-  <form class="modal__content" action="#"> 
+<section class="modal">
+  <h2 class="visually-hidden">Create new card</h2>
+  <form class="modal__content" action="#" enctype="multipart/form-data"> 
     <fieldset class="modal__forms">
       <legend class="modal__forms-title">Create new card</legend>
       <label class="modal__forms-label" for="name">Name</label>
       <input class="modal__forms-text" id="name" type="text" name="name" placeholder="Enter card name" autofocus="autofocus" required="required" autocomplete="on"/>
       <div class="modal__forms-file"><span class="modal__forms-label">Card image</span>
         <label class="modal__forms-file-label" for="file">Choose a file</label>
-        <input class="modal__forms-file-input" id="file" type="file" name="image" enctype="multipart/form-data"/>
+        <input class="modal__forms-file-input" id="file" type="file" name="image"/>
       </div>
       <label class="modal__forms-label" for="description">Description</label>
       <textarea class="modal__forms-text" id="description" name="text" rows="5" placeholder="Enter card description"></textarea>

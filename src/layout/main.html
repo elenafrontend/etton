@@ -14,7 +14,7 @@
     <header class="header">
       <button class="menu icon-burger"><span class="visually-hidden">Menu icon</span></button><a class="header__logo" href="#">
         <picture>
-          <source type="image/webp" srcset="images/logo.webp" 1x><img src="images/logo.png" alt="logo" width="208" heigh="70">
+          <source type="image/webp" srcset="images/logo.webp 1x"><img src="images/logo.png" alt="logo" width="208" height="70">
         </picture></a>
       <nav class="nav"> 
         <ul class="nav__list"> 
@@ -28,15 +28,16 @@
       <div class="button-wrapper">
         <button class="add-button">Add item</button>
       </div>
-      <section class="modal"> 
-        <form class="modal__content" action="#"> 
+      <section class="modal">
+        <h2 class="visually-hidden">Create new card</h2>
+        <form class="modal__content" action="#" enctype="multipart/form-data"> 
           <fieldset class="modal__forms">
             <legend class="modal__forms-title">Create new card</legend>
             <label class="modal__forms-label" for="name">Name</label>
             <input class="modal__forms-text" id="name" type="text" name="name" placeholder="Enter card name" autofocus required autocomplete="on">
             <div class="modal__forms-file"><span class="modal__forms-label">Card image</span>
               <label class="modal__forms-file-label" for="file">Choose a file</label>
-              <input class="modal__forms-file-input" id="file" type="file" name="image" enctype="multipart/form-data">
+              <input class="modal__forms-file-input" id="file" type="file" name="image">
             </div>
             <label class="modal__forms-label" for="description">Description</label>
             <textarea class="modal__forms-text" id="description" name="text" rows="5" placeholder="Enter card description"></textarea>

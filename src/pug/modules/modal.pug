@@ -1,5 +1,6 @@
-section.modal 
-	form.modal__content(action="#") 
+section.modal
+	h2.visually-hidden Create new card
+	form.modal__content(action="#" enctype="multipart/form-data") 
 		fieldset.modal__forms
 			legend.modal__forms-title Create new card
 			label.modal__forms-label(for="name") Name
@@ -7,7 +8,7 @@ section.modal
 			.modal__forms-file
 				span.modal__forms-label Card image
 				label.modal__forms-file-label(for="file") Choose a file
-				input.modal__forms-file-input#file(type="file" name="image" enctype="multipart/form-data")
+				input.modal__forms-file-input#file(type="file" name="image")
 			label.modal__forms-label(for="description") Description
 			textarea.modal__forms-text#description(name="text", rows="5" placeholder="Enter card description")
 			input.modal__forms-checkbox#show(type="checkbox")
