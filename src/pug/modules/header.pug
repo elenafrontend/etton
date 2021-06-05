@@ -1,12 +1,13 @@
 header.header
-	//- menu button
-	button.menu.icon-burger
-		span.visually-hidden Menu icon
-	a.header__logo(href="#")
-		picture
-			source(type="image/webp" srcset="images/logo.webp 1x")
-			img(src="images/logo.png", alt="logo" width="208" height="70")
-	
-	include nav
+	.container.header__container
+		//- menu button
+		button.menu.icon-burger
+			span.visually-hidden Menu icon
+		a.header__logo(href="#")
+			picture
+				source(type="image/webp" srcset="images/logo.webp 1x")
+				img(src="images/logo.png", alt="logo" width="208" height="70")
+		
+		include nav
 	
 	
