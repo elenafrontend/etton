@@ -1,10 +1,10 @@
 section.modal
 	h2.visually-hidden Create new card
-	form.modal__content(action="#" enctype="multipart/form-data") 
+	form.modal__content(action="#") 
 		fieldset.modal__forms
 			legend.modal__forms-title Create new card
 			label.modal__forms-label(for="name") Name
-			input.modal__forms-text#name(type="text", name="name" placeholder="Enter card name" autofocus required autocomplete="on")
+			input.modal__forms-text#name(type="text", name="name" placeholder="Enter card name" autofocus autocomplete="on")
 			.modal__forms-file
 				span.modal__forms-label Card image
 				label.modal__forms-file-label(for="file") Choose a file
@@ -12,7 +12,7 @@ section.modal
 			label.modal__forms-label(for="description") Description
 			textarea.modal__forms-text#description(name="text", rows="5" placeholder="Enter card description")
 			input.modal__forms-checkbox#show(type="checkbox")
-			label.modal__forms-label.modal__forms-label-checkbox(for="show") Accept smth
+			label.modal__forms-label.modal__forms-label-checkbox(for="show") Show
 		.modal__buttons 
 			button.modal__button.modal__button--ok.modal__button--blocked(type="submit" disabled) ok 
-			button.modal__button.modal__button--cancel cancel
+			button.modal__button.modal__button--cancel(type="button") cancel
