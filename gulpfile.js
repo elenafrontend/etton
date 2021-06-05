@@ -20,7 +20,7 @@ function browsersync() {
 }
 
 function html() {
-	return src('src/pug/**/*.pug')
+	return src('src/pug/*.pug')
 		.pipe(pug({
 			pretty: true
 		}))

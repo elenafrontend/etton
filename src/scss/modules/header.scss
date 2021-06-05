@@ -17,12 +17,12 @@
 
     .menu {
       &::before {
-        background-image: url(../../images/cross.svg);
+        background-image: url(../images/cross.svg);
       }
 
       &:hover {
         &::before {
-          background-image: url(../../images/cross-hover.svg);
+          background-image: url(../images/cross-hover.svg);
           animation-name: scale;
           animation-duration: 0.5s;
           animation-iteration-count: infinite;
@@ -77,7 +77,7 @@
     left: 20px;
     width: 40px;
     height: 40px;
-    background: url(../../images/burger.svg) 50% no-repeat;
+    background: url(../images/burger.svg) 50% no-repeat;
     background-size: contain;
     transition: $transition;
 
@@ -89,7 +89,7 @@
 
   &:hover {
     &::before {
-      background-image: url(../../images/burger-hover.svg);
+      background-image: url(../images/burger-hover.svg);
     }
   }
 }

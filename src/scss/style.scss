@@ -86,6 +86,7 @@ $bdrs: 3px;
 html,
 body {
   height: 100%;
+  box-sizing: border-box;
 }
 
 html {
@@ -98,6 +99,10 @@ body {
   padding-top: 90px;
   color: $color-primary;
   font-family: "Roboto", sans-serif;
+}
+
+main {
+  flex: 1 1 auto;
 }
 
 .visually-hidden {

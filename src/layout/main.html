@@ -37,9 +37,12 @@
             <legend class="modal__forms-title">Create new card</legend>
             <label class="modal__forms-label" for="name">Name</label>
             <input class="modal__forms-text" id="name" type="text" name="name" placeholder="Enter card name" autofocus autocomplete="on">
-            <div class="modal__forms-file"><span class="modal__forms-label">Card image</span>
-              <label class="modal__forms-file-label" for="file">Choose a file</label>
-              <input class="modal__forms-file-input" id="file" type="file" name="image">
+            <div class="upload-btn"><span class="modal__forms-label">Card image</span>
+              <input class="upload-btn__input" id="file" type="file" name="image">
+              <label class="upload-btn__label" for="file">
+                <div class="upload-btn__label-box modal__forms-text">No file chosen</div>
+                <div class="upload-btn__label-btn">Choose a file</div>
+              </label>
             </div>
             <label class="modal__forms-label" for="description">Description</label>
             <textarea class="modal__forms-text" id="description" name="text" rows="5" placeholder="Enter card description"></textarea>
@@ -52,10 +55,10 @@
           </div>
         </form>
       </section>
-      <footer class="footer">
-        <div class="container footer__container"><a class="footer__email" href="mailto:elenafrontend@ya.ru" title="Email me">elenafrontend@ya.ru</a></div>
-      </footer>
     </main>
+    <footer class="footer">
+      <div class="container footer__container"><a class="footer__email" href="mailto:elenafrontend@ya.ru" title="Email me">elenafrontend@ya.ru</a></div>
+    </footer>
     <script src="js/script.min.js"></script>
   </body>
 </html>

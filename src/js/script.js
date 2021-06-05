@@ -73,3 +73,22 @@ checkboxSnow.addEventListener('click', function() {
 		submitBtn.disabled = true;
 	}
 })
+
+// File upload
+
+let fields = document.querySelectorAll('.upload-btn__input');
+    Array.prototype.forEach.call(fields, function (input) {
+      let label = input.nextElementSibling,
+        labelVal = label.querySelector('.upload-btn__label-box').innerText;
+  
+      input.addEventListener('change', function (e) {
+        let countFiles = '';
+        if (this.files && this.files.length >= 1)
+          countFiles = this.files.length;
+  
+        if (countFiles)
+          label.querySelector('.upload-btn__label-box').innerText = 'Files: ' + countFiles;
+        else
+          label.querySelector('.upload-btn__label-box').innerText = labelVal;
+      });
+    });

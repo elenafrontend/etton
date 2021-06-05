@@ -5,10 +5,12 @@ section.modal
 			legend.modal__forms-title Create new card
 			label.modal__forms-label(for="name") Name
 			input.modal__forms-text#name(type="text", name="name" placeholder="Enter card name" autofocus autocomplete="on")
-			.modal__forms-file
+			.upload-btn
 				span.modal__forms-label Card image
-				label.modal__forms-file-label(for="file") Choose a file
-				input.modal__forms-file-input#file(type="file" name="image")
+				input.upload-btn__input#file(type="file" name="image")
+				label.upload-btn__label(for="file")
+					.upload-btn__label-box.modal__forms-text No file chosen
+					.upload-btn__label-btn Choose a file
 			label.modal__forms-label(for="description") Description
 			textarea.modal__forms-text#description(name="text", rows="5" placeholder="Enter card description")
 			input.modal__forms-checkbox#show(type="checkbox")
