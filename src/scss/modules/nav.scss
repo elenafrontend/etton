@@ -31,7 +31,8 @@
     text-transform: uppercase;
     transition: $transition;
 
-    &:hover {
+    &:hover,
+    &--active {
       background-color: $color-yellow;
 
       &::before {
