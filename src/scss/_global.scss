@@ -55,7 +55,7 @@ main {
   }
 
   @include breakpoint-min(md) {
-    max-width: 640px;
+    max-width: 680px;
   }
 
   @include breakpoint-min(lg) {
