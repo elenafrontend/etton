@@ -29,6 +29,10 @@
       background-color: $color-primary;
 
       .cards-item__img {
+        img {
+          transform: scale(1.5);
+        }
+
         picture:last-child {
           display: none;
         }
@@ -60,6 +64,11 @@
       picture {
         position: absolute;
         bottom: 0;
+        overflow: hidden;
+      }
+
+      img {
+        transition: 0.5s;
       }
     }
 
