@@ -1,5 +1,6 @@
 let yellow = "#fdd805";
 let grey = "#8f8f9b";
+let primary = "#2d2d44";
 
 let header = document.querySelector('header');
 let footer = document.querySelector(".footer");
@@ -45,10 +46,15 @@ burgerBtn.addEventListener("click", function () {
 
 // modal box
 
+let body = document.body;
 let modalSection = document.querySelector('.modal');
 let addBtn = document.querySelector('.add-button');
 let cancelBtn = modalSection.querySelector('.modal__button--cancel');
 let inputBoxes = modalSection.querySelectorAll('.modal__forms-text');
+let inputFile = modalSection.querySelector('.modal__forms-text');
+let checkboxSnow =  document.querySelector('.modal__forms-checkbox');
+let submitBtn = document.querySelector('.modal__button--ok');
+let uploadFields = document.querySelectorAll('.upload-btn__input');
 
 addBtn.addEventListener('click', function() {
 	modalSection.classList.add('modal--show');
@@ -56,7 +62,6 @@ addBtn.addEventListener('click', function() {
 	header.style.filter = "blur(5px)";
 	footer.style.filter = "blur(5px)";
 	
-	let body = document.body;
   let paddingOffset = window.innerWidth - body.offsetWidth + "px";
 	
 	body.style.paddingRight = paddingOffset;
@@ -72,7 +77,22 @@ cancelBtn.addEventListener('click', function() {
 	document.body.style.overflow = "";
   body.style.paddingRight = "0px";
   header.style.paddingRight = "0px";
+
+	for (let inputBox of inputBoxes) {
+		inputBox.style.borderColor = grey;
+	}
+	
+	for (let uploadField of uploadFields) {
+		uploadField.value = "";
+		
+		let label = uploadField.nextElementSibling;
+		label.style.color = grey;
+		label.querySelector('.upload-btn__label-box').innerText = 'No file chosen';
+		label.querySelector('.upload-btn__label-btn').
+			style.backgroundColor = primary;
+	}
 })
+
 
 for (let inputBox of inputBoxes) {
 	inputBox.oninput = function() {
@@ -86,8 +106,6 @@ for (let inputBox of inputBoxes) {
 
 // Modal checkbox
 
-let checkboxSnow =  document.querySelector('.modal__forms-checkbox');
-let submitBtn = document.querySelector('.modal__button--ok');
 
 checkboxSnow.addEventListener('click', function() {
 	if (checkboxSnow.checked) {
@@ -98,7 +116,6 @@ checkboxSnow.addEventListener('click', function() {
 })
 
 // File upload
-let uploadFields = document.querySelectorAll('.upload-btn__input');
     Array.prototype.forEach.call(uploadFields, function (input) {
       let label = input.nextElementSibling,
         labelVal = label.querySelector('.upload-btn__label-box').innerText;
@@ -106,13 +123,14 @@ let uploadFields = document.querySelectorAll('.upload-btn__input');
       input.addEventListener('change', function (e) {
 				let uploadBtn = label.querySelector('.upload-btn__label-btn');
 				let uploadBox = label.querySelector('.upload-btn__label-box');
-				label.style.color = yellow;
-				uploadBtn.style.backgroundColor = yellow;
-				uploadBox.style.borderColor = yellow;
+				
 
         let countFiles = '';
         if (this.files && this.files.length >= 1)
           countFiles = this.files.length;
+					label.style.color = yellow;
+					uploadBtn.style.backgroundColor = yellow;
+					uploadBox.style.borderColor = yellow;
   
         if (countFiles)
           label.querySelector('.upload-btn__label-box').innerText = 'Files: ' + countFiles;
