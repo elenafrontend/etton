@@ -82,13 +82,13 @@
 
       &:focus ~ .modal__forms-label-checkbox {
         &::before {
-          background-image: url(../images/checkbox-focus.svg);
+          background-image: url(../images/sprite.svg#checkbox-focus);
         }
       }
 
       &:checked ~ .modal__forms-label-checkbox {
         &::before {
-          background-image: url(../images/checkbox-active.svg);
+          background-image: url(../images/sprite.svg#checkbox-active);
         }
       }
     }
@@ -109,7 +109,7 @@
           top: 50%;
           width: 20px;
           height: 20px;
-          background: url(../images/checkbox-default.svg) no-repeat;
+          background: url(../images/sprite.svg#checkbox-default) no-repeat;
           background-size: contain;
           transform: translateY(-50%);
         }
@@ -196,7 +196,7 @@
         width: 20px;
         height: 20px;
         margin-right: 5px;
-        background: url(../images/download.svg) no-repeat;
+        background: url(../images/sprite.svg#download) no-repeat;
       }
     }
 

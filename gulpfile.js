@@ -9,6 +9,7 @@ const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
 const del = require('del');
 const htmlmin = require('gulp-htmlmin');
+const svgSprite = require('gulp-svg-sprite');
 
 
 function browsersync() {
@@ -60,7 +61,7 @@ function towebp() {
 }
 
 function images() {
-	return src('src/images/**/*')
+	return src('src/images/*')
 		.pipe(imagemin(
 			[
 				imagemin.gifsicle({interlaced: true}),
@@ -75,6 +76,19 @@ function images() {
 		]
 		))
 		.pipe(dest('dist/images'))
+}
+
+function svg() {
+	return src('src/images/svg/*.svg')
+		.pipe(svgSprite({
+			mode: {
+				stack: {
+					sprite: "../sprite.svg",
+					example: true,
+				},
+			},
+		}))
+		.pipe(dest('src/images'))
 }
 
 function watching() {
@@ -106,6 +120,7 @@ exports.browsersync = browsersync;
 exports.towebp = towebp;
 exports.images = images;
 exports.cleanDist = cleanDist;
+exports.svg = svg;
 
 exports.default = parallel(html, styles, scripts, watching, browsersync);
 exports.build = series(cleanDist, images, build);

@@ -21,12 +21,12 @@
 
     .menu {
       &::before {
-        background-image: url(../images/cross.svg);
+        background-image: url(../images/sprite.svg#cross);
       }
 
       &:hover {
         &::before {
-          background-image: url(../images/cross-hover.svg);
+          background-image: url(../images/sprite.svg#cross-hover);
           animation-name: scale;
           animation-duration: 0.5s;
           animation-iteration-count: infinite;
@@ -81,7 +81,7 @@
     left: 20px;
     width: 40px;
     height: 40px;
-    background: url(../images/burger.svg) 50% no-repeat;
+    background: url(../images/sprite.svg#burger) 50% no-repeat;
     background-size: contain;
 
     @include breakpoint-min(xs) {
@@ -92,7 +92,7 @@
 
   &:hover {
     &::before {
-      background-image: url(../images/burger-hover.svg);
+      background-image: url(../images/sprite.svg#burger-hover);
     }
   }
 }

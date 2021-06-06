@@ -1,6 +1,10 @@
 
 block variables
 
+mixin svg(name, class)
+	svg.class
+		use(xlink:href="images/sprite.svg#" + name)
+
 doctype html
 html(lang="en")
 	head
@@ -12,9 +16,6 @@ html(lang="en")
 		meta(property="og:image", content="images/logo.png")
 
 		title #{title}
-		//- link(rel="preload", href="css/normalize.css" as="style" onload="this.onload=null;this.rel='stylesheet'")
-		//- noscript
-			link(rel="stylesheet", href="css/normalize.css")
 		link(rel="stylesheet", href="css/style.min.css")
 
 	body 
@@ -30,4 +31,4 @@ html(lang="en")
 
 		include ../modules/footer
 
-		script(src="js/script.js")
+		script(src="js/script.min.js")
