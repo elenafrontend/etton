@@ -1,3 +1,6 @@
+let yellow = "#fdd805";
+let grey = "#8f8f9b";
+
 let header = document.querySelector('header');
 let footer = document.querySelector(".footer");
 let burgerBtn = document.querySelector('.menu');
@@ -42,9 +45,10 @@ burgerBtn.addEventListener("click", function () {
 
 // modal box
 
-let addBtn = document.querySelector('.add-button');
 let modalSection = document.querySelector('.modal');
-let cancelBtn = document.querySelector('.modal__button--cancel');
+let addBtn = document.querySelector('.add-button');
+let cancelBtn = modalSection.querySelector('.modal__button--cancel');
+let inputBoxes = modalSection.querySelectorAll('.modal__forms-text');
 
 addBtn.addEventListener('click', function() {
 	modalSection.classList.add('modal--show');
@@ -70,6 +74,16 @@ cancelBtn.addEventListener('click', function() {
   header.style.paddingRight = "0px";
 })
 
+for (let inputBox of inputBoxes) {
+	inputBox.oninput = function() {
+		if (inputBox.value.length > 1) {
+			inputBox.style.borderColor = yellow;
+		} else {
+			inputBox.style.borderColor = grey;
+		}
+	}
+}
+
 // Modal checkbox
 
 let checkboxSnow =  document.querySelector('.modal__forms-checkbox');
@@ -84,13 +98,18 @@ checkboxSnow.addEventListener('click', function() {
 })
 
 // File upload
-
-let fields = document.querySelectorAll('.upload-btn__input');
-    Array.prototype.forEach.call(fields, function (input) {
+let uploadFields = document.querySelectorAll('.upload-btn__input');
+    Array.prototype.forEach.call(uploadFields, function (input) {
       let label = input.nextElementSibling,
         labelVal = label.querySelector('.upload-btn__label-box').innerText;
   
       input.addEventListener('change', function (e) {
+				let uploadBtn = label.querySelector('.upload-btn__label-btn');
+				let uploadBox = label.querySelector('.upload-btn__label-box');
+				label.style.color = yellow;
+				uploadBtn.style.backgroundColor = yellow;
+				uploadBox.style.borderColor = yellow;
+
         let countFiles = '';
         if (this.files && this.files.length >= 1)
           countFiles = this.files.length;
