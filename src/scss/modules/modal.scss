@@ -167,14 +167,15 @@
 
   &__label {
     display: flex;
+    flex-wrap: wrap;
+    width: 100%;
 
     &-box {
-      width: 50%;
+      width: 100%;
       min-height: 30px;
       margin-bottom: 0;
       text-align: center;
-      border-right: none;
-      border-top-right-radius: 0;
+      border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
     }
 
@@ -183,20 +184,42 @@
 
       display: flex;
       align-items: center;
+      justify-content: center;
       position: relative;
-      max-width: 50%;
-      padding-left: 35px;
+      width: 100%;
       text-align: center;
       border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
+      border-top-right-radius: 0;
 
       &::before {
         content: "";
-        position: absolute;
-        left: 10px;
         width: 20px;
         height: 20px;
+        margin-right: 5px;
         background: url(../images/download.svg) no-repeat;
+      }
+    }
+
+    @include breakpoint-min(xs) {
+      &-box,
+      &-btn {
+        width: 50%;
+      }
+
+      &-box {
+        border-right: none;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+
+      &-btn {
+        justify-content: flex-start;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+
+        &::before {
+          left: 10px;
+        }
       }
     }
   }
