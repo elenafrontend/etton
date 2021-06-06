@@ -22,10 +22,11 @@ html(lang="en")
 		
 		main
 			h1.visually-hidden #{title}
-			include ../modules/button 
 			include ../modules/modal
-
-			block content
+			
+			.content
+				include ../modules/button 
+				block content
 
 		include ../modules/footer
 

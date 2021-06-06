@@ -45,7 +45,8 @@ let cancelBtn = document.querySelector('.modal__button--cancel');
 addBtn.addEventListener('click', function() {
 	modalSection.classList.add('modal--show');
 	document.body.style.overflow = "hidden";
-
+	header.style.filter = "blur(5px)";
+	
 	let body = document.body;
   let paddingOffset = window.innerWidth - body.offsetWidth + "px";
 	
@@ -55,7 +56,8 @@ addBtn.addEventListener('click', function() {
 
 cancelBtn.addEventListener('click', function() {
 	modalSection.classList.remove('modal--show');
-
+	header.style.filter = "none";
+	
 	document.body.style.overflow = "";
   body.style.paddingRight = "0px";
   header.style.paddingRight = "0px";
