@@ -35,7 +35,8 @@
     visibility: visible;
     transform: translateY(0);
 
-    & ~ .content {
+    & ~ .content,
+    & ~ .footer {
       filter: blur(5px);
     }
   }

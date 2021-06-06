@@ -1,7 +1,12 @@
+let header = document.querySelector('header');
+let footer = document.querySelector(".footer");
+let burgerBtn = document.querySelector('.menu');
+
+
 // header opacity
 
 window.onscroll = function () {
-  if (window.pageYOffset > 100) {
+	if (window.pageYOffset > 100) {
     header.style.opacity = "0.95";
   } else {
     header.style.opacity = "1";
@@ -10,9 +15,6 @@ window.onscroll = function () {
 
 
 // burger menu open
-
-let burgerBtn = document.querySelector('.menu');
-let header = document.querySelector('header');
 
 burgerBtn.addEventListener("click", function () {
   header.classList.toggle("header--active-nav");
@@ -27,11 +29,13 @@ burgerBtn.addEventListener("click", function () {
 		// убираем скачок страницы - компенсируем скролл
     body.style.paddingRight = paddingOffset;
     header.style.paddingRight = paddingOffset;
+    footer.style.filter = "blur(5px)";
   } else {
-    document.body.style.overflow = "";
+		document.body.style.overflow = "";
 		// убираем компенсацию скролла
     body.style.paddingRight = "0px";
     header.style.paddingRight = "0px";
+		footer.style.filter = "none";
   }
 });
 
@@ -46,6 +50,7 @@ addBtn.addEventListener('click', function() {
 	modalSection.classList.add('modal--show');
 	document.body.style.overflow = "hidden";
 	header.style.filter = "blur(5px)";
+	footer.style.filter = "blur(5px)";
 	
 	let body = document.body;
   let paddingOffset = window.innerWidth - body.offsetWidth + "px";
@@ -55,8 +60,10 @@ addBtn.addEventListener('click', function() {
 })
 
 cancelBtn.addEventListener('click', function() {
+
 	modalSection.classList.remove('modal--show');
 	header.style.filter = "none";
+	footer.style.filter = "none";
 	
 	document.body.style.overflow = "";
   body.style.paddingRight = "0px";
