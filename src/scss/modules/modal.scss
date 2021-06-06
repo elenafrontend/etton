@@ -66,11 +66,18 @@
 
     &-checkbox {
       appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+
+      &:focus ~ .modal__forms-label-checkbox {
+        &::before {
+          background-image: url(../images/checkbox-focus.svg);
+        }
+      }
 
       &:checked ~ .modal__forms-label-checkbox {
         &::before {
-          background: url(../images/checkbox-active.svg) no-repeat;
-          background-size: contain;
+          background-image: url(../images/checkbox-active.svg);
         }
       }
     }
