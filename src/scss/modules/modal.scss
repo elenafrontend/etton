@@ -36,6 +36,11 @@
     transform: translateY(0);
   }
 
+  &__title-wrapper {
+    width: 100%;
+    overflow: hidden;
+  }
+
   &__content {
     width: 100%;
     margin: 0 auto;
@@ -44,6 +49,7 @@
     box-shadow: -1px 5px 12px 0 rgba(89, 90, 90, 0.3);
     border-radius: $bdrs;
     box-sizing: border-box;
+    overflow: hidden;
 
     @include breakpoint-min(sm) {
       width: 350px;
