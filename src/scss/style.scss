@@ -1,156 +1,22 @@
+// === RESET ===
+@import "_reset";
 @import "../css/normalize";
+
+// === FONTS ===
 @import "../css/iconfont";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
-// === PLACEHOLDERS ===
-%list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+// === GLOBAL ===
+@import "_vars";
+@import "_mixin";
+@import "_global";
 
-%btn {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  font: inherit;
-  text-decoration: none;
-  background-color: transparent;
-  border: 1px solid transparent;
-  cursor: pointer;
-}
-// === / PLACEHOLDERS ===
+// === PAGES & MODULES ===
 
-// === VARIABLES ===
-
-// Font
-
-// Colors
-$color-primary: #2d2d44;
-$color-white: #ffffff;
-$color-grey: #8f8f9b;
-$color-yellow: #fdd805;
-
-// Breakpoints
-$breakpoints: (
-  xs: 400px,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1400px,
-);
-
-$transition: 0.2s;
-$bdrs: 3px;
-
-// === / VARIABLES ===
-
-// === MIXINS ===
-
-// Breakpoints
-@mixin breakpoint-min($breakpoint) {
-  @if map-has-key($breakpoints, $breakpoint) {
-    @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
-      @content;
-    }
-  } @else {
-    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
-        + "Please make sure it is defined in `$breakpoints` map.";
-  }
-}
-
-@mixin breakpoint-max($breakpoint) {
-  @if map-has-key($breakpoints, $breakpoint) {
-    @media (max-width: (#{map-get($breakpoints, $breakpoint) - 1px})) {
-      @content;
-    }
-  } @else {
-    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
-        + "Please make sure it is defined in `$breakpoints` map.";
-  }
-}
-
-// === / MIXINS ===
-
-// === ANIMATION ===
-
-@keyframes scale {
-  100% {
-    transform: scale(90%);
-  }
-}
-// === / ANIMATION ===
-
-// === COMMON ===
-html,
-body {
-  height: 100%;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  padding-top: 90px;
-  color: $color-primary;
-  font-family: "Roboto", sans-serif;
-}
-
-main {
-  flex: 1 1 auto;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  border: 1px solid transparent;
-  clip: rect(0, 0, 0, 0);
-  clip-path: inset(100%);
-}
-
-.container {
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 0 20px;
-
-  @include breakpoint-min(xs) {
-    max-width: 400px;
-  }
-
-  @include breakpoint-min(md) {
-    max-width: 640px;
-  }
-
-  @include breakpoint-min(lg) {
-    max-width: 992px;
-  }
-}
-
-// === HEADER ===
 @import "modules/header";
-// === / HEADER ===
-
-// === MODAL ===
 @import "modules/modal";
-// === / MODAL ===
-
-// === BUTTON ===
 @import "modules/button";
-// === / BUTTON ===
-
-// === CARDS ===
 @import "modules/cards";
-// === / CARDS ===
-
-// === FOOTER ===
 @import "modules/footer";
-// === / FOOTER ===
+
+// === / PAGES & MODULES ===

@@ -1,0 +1,64 @@
+// === ANIMATION ===
+
+@keyframes scale {
+  100% {
+    transform: scale(90%);
+  }
+}
+// === / ANIMATION ===
+
+// === COMMON ===
+html,
+body {
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  padding-top: 90px;
+  color: $color-primary;
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid transparent;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(100%);
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @include breakpoint-min(xs) {
+    max-width: 400px;
+  }
+
+  @include breakpoint-min(md) {
+    max-width: 640px;
+  }
+
+  @include breakpoint-min(lg) {
+    max-width: 992px;
+  }
+}
