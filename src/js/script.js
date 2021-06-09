@@ -4,7 +4,7 @@ let primary = "#2d2d44";
 
 let header = document.querySelector('header');
 let footer = document.querySelector(".footer");
-let burgerBtn = document.querySelector('.menu');
+let burgerBtn = document.querySelector('.burger-btn');
 
 
 // header opacity
