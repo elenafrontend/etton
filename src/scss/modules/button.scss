@@ -1,75 +1,75 @@
 .button-wrapper {
-  margin: 50px auto;
-  padding: 20px;
-  text-align: center;
+	margin: 50px auto;
+	padding: 20px;
+	text-align: center;
 }
 
 .add-button {
-  @extend %btn;
+	@extend %btn;
 
-  position: relative;
-  min-width: 100%;
-  padding: 20px 40px;
+	position: relative;
+	vertical-align: middle;
+	border: 0;
+	border-radius: $bdrs;
+	padding: 20px 40px;
+	min-width: 100%;
 
-  color: $color-primary;
-  font-size: 30px;
-  font-weight: 700;
-  vertical-align: middle;
+	box-shadow: inset 0 0 0 3px $color-primary;
+	font-weight: 700;
+	font-size: 30px;
+	color: $color-primary;
 
-  background: none;
-  box-shadow: inset 0 0 0 3px $color-primary;
-  border: 0;
-  border-radius: $bdrs;
-  box-sizing: border-box;
+	background: none;
+	box-sizing: border-box;
 
-  transition: color 0.3s;
+	transition: color 0.3s;
 
-  @include breakpoint-min(xs) {
-    min-width: 300px;
-  }
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		width: 0;
+		height: 0;
 
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 0;
+		border: 3px solid transparent;
+		box-sizing: inherit;
+	}
 
-    border: 3px solid transparent;
-    box-sizing: inherit;
-  }
+	&::before {
+		top: 0;
+		left: 0;
+	}
 
-  &::before {
-    top: 0;
-    left: 0;
-  }
+	&::after {
+		top: 0;
+		left: 0;
+	}
 
-  &::after {
-    top: 0;
-    left: 0;
-  }
+	&:hover {
+		color: $color-yellow;
 
-  &:hover {
-    color: $color-yellow;
+		&::before,
+		&::after {
+			width: 100%;
+			height: 100%;
+		}
 
-    &::before,
-    &::after {
-      width: 100%;
-      height: 100%;
-    }
+		&::before {
+			border-top-color: $color-yellow; // Make borders visible
+			border-right-color: $color-yellow;
+			transition: width 0.3s ease-out,
+				// Width expands first
+				height 0.3s ease-out 0.3s; // And then height
+		}
 
-    &::before {
-      border-top-color: $color-yellow; // Make borders visible
-      border-right-color: $color-yellow;
-      transition: width 0.3s ease-out,
-        // Width expands first
-          height 0.3s ease-out 0.3s; // And then height
-    }
+		&::after {
+			border-bottom-color: $color-yellow; // Make borders visible
+			border-left-color: $color-yellow;
+			transition: height 0.3s ease-out, width 0.3s ease-out 0.3s; // Animate height first, then width
+		}
 
-    &::after {
-      border-bottom-color: $color-yellow; // Make borders visible
-      border-left-color: $color-yellow;
-      transition: height 0.3s ease-out, width 0.3s ease-out 0.3s; // Animate height first, then width
-    }
-  }
+		@include breakpoint-min(xs) {
+			min-width: 300px;
+		}
+	}
 }

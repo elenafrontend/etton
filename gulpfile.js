@@ -10,7 +10,7 @@ const webp = require('gulp-webp');
 const del = require('del');
 const htmlmin = require('gulp-htmlmin');
 const svgSprite = require('gulp-svg-sprite');
-
+const gulpStylelint = require('gulp-stylelint');
 
 function browsersync() {
 	browserSync.init({
@@ -102,6 +102,15 @@ function cleanDist() {
 	return del('dist')
 }
 
+function lintCss() {
+	return src('src/scss/modules/button.scss')
+    .pipe(gulpStylelint({
+      reporters: [
+        {formatter: 'string', console: true}
+      ]
+    }));
+}
+
 function build() {
 	return src([
 		'src/css/style.min.css',
@@ -121,6 +130,7 @@ exports.towebp = towebp;
 exports.images = images;
 exports.cleanDist = cleanDist;
 exports.svg = svg;
+exports.lintCss = lintCss;
 
 exports.default = parallel(html, styles, scripts, watching, browsersync);
 exports.build = series(cleanDist, images, build);
