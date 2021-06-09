@@ -5,7 +5,7 @@
     "at-rule-no-unknown": [
       true,
       {
-        "ignoreAtRules": ["extend", "include"]
+        "ignoreAtRules": ["extend", "include", "mixin"]
       }
     ],
     "indentation": "tab",
@@ -102,10 +102,10 @@
         "content",
         "quotes",
         "position",
-        "left",
-        "right",
         "top",
         "bottom",
+        "left",
+        "right",
         "z-index",
         "display",
         "columns",
